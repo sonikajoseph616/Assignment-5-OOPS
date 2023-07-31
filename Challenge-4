@@ -1,0 +1,18 @@
+class Account:
+    def __init__(self, title=None, Balance=0):
+        self.title = title
+        self.Balance = Balance
+
+
+class SavingsAccount(Account):
+    def __init__(self, title, Balance, interestRate):
+        self.interestRate = interestRate
+        super().__init__(title, Balance)
+        
+    def display(self): 
+        return f"Account Holder Name: {self.title}\nAccount Balance: {self.Balance} Rs. Only\nInterest Rate: {self.interestRate} %"
+
+print("We welcome you to State Bank Of India!!!")
+print("You can check Your Balance and Respective Interest Rate Here")           
+obj = SavingsAccount("Mary Sonika", 5000, 5)
+print(obj.display())
