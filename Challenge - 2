@@ -1,0 +1,32 @@
+class Calculator:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def add(self):
+        sum_result = self.num1 + self.num2
+        return sum_result
+
+    def subtract(self):
+        subtraction_result = self.num1 - self.num2
+        return subtraction_result
+
+    def multiply(self):
+        multiplication_result = self.num1 * self.num2
+        return multiplication_result
+
+    def divide(self):
+        # Added a check to prevent division by zero
+        if self.num2 != 0:
+            division_result = self.num1 / self.num2
+            return division_result
+        else:
+            return "Cannot divide by zero!"
+
+num1 = int(input("Enter num 1: "))
+num2 = int(input("Enter num 2: "))
+obj = Calculator(num1, num2)
+print('Addition of Entered two Numbers:', obj.add())
+print('Subtraction of Entered two Numbers:', obj.subtract())
+print('Multiplication of Entered two Numbers:', obj.multiply())
+print('Division of Entered two Numbers:', obj.divide())
